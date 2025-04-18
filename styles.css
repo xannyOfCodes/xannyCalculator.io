@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap'
+);
+:root{
+    --primary-clr: #3a4452;
+    --secondary-clr: #e3f9ff;
+    --accent-clr: #33ffd8;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Winky Sans", sans-serif;
+    background: var(--primary-clr);
+    color: var(--secondary-clr);
+}
+.mainConatiner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-family: "Inter", sans-serif;
+    border-bottom: 1px solid gray;
+}
+nav h1{
+    font-size: 2rem;
+}
+nav button{
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    background: none;
+    font-weight: 300;
+    color: var(--secondary-clr);
+}
+
+.calculatorItems{
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    bottom: 1rem;
+}
+.displayCalculations{
+    display:flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+}
+.displayCalculations{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.displayCalculations input{
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: end;
+    background: transparent;
+    font-size: 2rem;
+    color: var(--secondary-clr);
+}
+.calculatorKeys{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    grid-template-rows: repeat(5, auto);
+    justify-content: space-around;
+    gap: 0.7rem;
+    margin-top: 2rem;
+}
+.calcKey{
+    width: 100%;
+}
+.calcKey{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--secondary-clrr);
+    border-radius: 1rem;
+    background: transparent;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.calculatorKeys .calcKey:nth-child(17){
+    grid-column: span 2;
+}
+.calculatorKeys .calcKey:nth-child(1), .calcKey:nth-child(2){
+    color: var(--accent-clr);
+}
+.calcKey:hover{
+    opacity: 0.8;
+}
+
+@media (width >=1440px){
+    .mainConatiner{
+        height: 100vh;
+    }
+}
+@media (width <=768px) and (orientation:landscape) {
+    body{
+        display: none;
+    }
+}
